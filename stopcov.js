@@ -1,14 +1,15 @@
 const periodInMinutes = 1; // for every 3 minute alarm should come
 var infected = 0;
-var rateNotification = "rate-notification";
+var CovNotification = "Cov-notification";
 
 console.log("LOADED")
 
 // Add a method when a alarm is triggerd
 browser.alarms.onAlarm.addListener(handleAlarm);
 
-
-// Create the basic notification
+/**
+ *
+ */
 function createNoti(){
 
     var oReq = new XMLHttpRequest();
@@ -21,12 +22,15 @@ function createNoti(){
 
 
 }
+
+/**
+ *
+ */
 function reqListener () {
     var data = JSON.parse(this.responseText);
     if(data.result==='ok'){
         if(data.data.infected !== infected){
-            console.log(this.responseText);
-            browser.notifications.create(rateNotification, {
+            browser.notifications.create(CovNotification, {
                 "type": "basic",
                 "iconUrl": browser.extension.getURL("icons/covid-19-96.png"),
                 "title": "ბოლო ინფორმაცია",
@@ -40,9 +44,11 @@ function reqListener () {
 
 }
 
-// when the alarm is triggerd print the alarm name and create the notification call
+/**
+ *
+ * @param alarmInfo
+ */
 function handleAlarm(alarmInfo) {
-    console.log("on alarm: " + alarmInfo.name);
     createNoti();
 }
 
