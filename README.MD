@@ -1,5 +1,7 @@
 #StopCov.ge ის დადასტურებული შემთხვევების მონიტორინგის AddOn FireFox ისთვის
 
+![Image description](images/count.png)
+![Image description](images/notification.png)
 
 ### ინსტალაცია
 
