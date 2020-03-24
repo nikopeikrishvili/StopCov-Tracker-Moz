@@ -4,7 +4,7 @@
   "name": "StopCov Monitor",
   "version": "1.0.1",
 
-  "description": "( Unofficial )Track infection changes on StopCov.ge",
+  "description": "( Unofficial ) Monitor infection changes on StopCov.ge with <= 1 minute delay",
 
   "icons": {
     "48": "icons/covid-19-48.png"
@@ -12,12 +12,6 @@
   "permissions" : [
     "notifications",
     "alarms"
-  ],
-  "content_scripts": [
-    {
-      "matches": ["*://*.mozilla.org/*"],
-      "js": ["stopcov.js"]
-    }
   ],
   "background": {
     "scripts": [

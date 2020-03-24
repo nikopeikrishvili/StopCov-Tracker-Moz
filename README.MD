@@ -4,7 +4,10 @@
 ![Image description](images/notification.png)
 
 ### ინსტალაცია
+ლინკი დაყენებისთვის
+https://addons.mozilla.org/en-US/firefox/addon/stopcov-monitor/
 
+ხელით დაყენება ან კონტრიბუცია
 
 
 ```
